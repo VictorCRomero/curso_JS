@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa</title>
+    <style>
+        body{
+            background-color: rgb(92, 92, 253);/* comentário de CSS */
+            color: white;
+            font: 20pt arial;
+            }
+        h1{
+            color: rgb(245, 190, 9);
+        }
+    </style>
+</head>
+<body>
+  <h1>Olá,mundo!</h1> <!-- comentário de html -->
+  <p>Explorando o universo</p>
+  <script>
+      var n1 = Number(window.prompt('insira um número:'))// Number.parseInt() são números inteiros
+      var n2 = Number(window.prompt('insira outro número:'))// Number.parseFloat() são números reais 
+      var s = n1 + n2// o window.prompt vai fornecer valores em strings, por isso converte para number.
+      window.alert(`A soma dos valores ${n1} e ${n2} é igual a ${s}!`)/* o + irá contatenar caso seja string + string e
+      o + irá somar caso seja number + number.
+      Podemos também utilizar apenas Number(). 
+      converter para string podemos usar String(n) ou n.toString() 
+      outras funções: 
+      s.length vai nos dar a quantidade de caracteres do string
+      s.toUpperCase() deixa os caracteres do string em maiúsculo
+      s.toLowerCase() deixa os caracteres do string em minúsculo */
+  </script>
+</body>
+</html>

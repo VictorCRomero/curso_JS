@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+    <style>
+        body {
+            font: 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`)
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}<br/>`)
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()}<br/>`)
+        // n.toFixed(2) ele fixará quantas casas decimais vão ficar a amostra, no caso temos duas casas.
+        //caso queira transformar os números em formato br (ex. 1.200,40), basta fazer n.toFixed(2).replace('.',',')
+        //se for salário se faz dessa forma: n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})
+        var n1 = Number(window.prompt(`Insira seu salário em Real:`).replace('.','').replace(',','.'))
+        document.write(`Valor em real de: ${n1.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}`)
+        // símbolos aritiméticos soma + , subtração - , multiplicação * , divisão / , resto da divisão % , ** expoente
+        // ordem -> () , ** , * ou / ou % , + ou -
+        // n += 4 -> n = n + 4 assim segue também para todas as demais operações.
+        /* acrescer n -> n ++ quer dizer que essa soma de 1 será acrescentada após o uso inicial do valor n 
+           acrescer n -> ++ n quer dizer que essa soma de 1 será acrescentada antes do uso inicial do valor n
+           n -- e -- n funcionam da mesma forma, mas decrescendo. */
+        /* símbolos relacionais, resultado será true/false. maior que > , menor que < , maior igual que >= . menor igual que <= ,
+           igual que == , diferente que != .
+           5 == 5 -> true , 5 == '5' -> true, pois para JS string e number são iguais, 
+           mas se você quiser que tanto os valores e tipos sejam iguais usar igual restrito 5 === 5 -> true ,
+           o mesmo para desigual restrito 5 !== '5' -> true 
+           símbolos lógicos ! -> não poder ser ... , && -> significa 'e' , || significa ou . 
+           5 > 3 && 1 == 3**2 -> false , 5 > 3 || 1 == 3**2 -> true. 
+           ordem -> ! , && , ||
+           operador ternários ex.: x==y ? 'sim' : 'não' . significa se ,
+           ordem de precedência -> aritiméticos, relacionais e lógicos, ternários. */
+           
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgb(27, 146, 27);
+            font: normal 15pt Arial ;
+        }
+        header {
+            text-align: center;
+            color: yellow;
+        }
+        article {
+            color: rgb(52, 52, 110);
+            font: normal 15pt Arial;
+            background-color: white;
+            border-radius: 10px;
+            width: 500px;
+            padding: 15px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8) ;
+        }
+        div {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Descubra se és brasileiro!</h1>
+    </header>
+    <Article>
+    <p>Qual é seu país de origem?</p>
+    <input type="text" name="txtp" id="txtp">
+    <p>Tu tens cidadania Brasileira?</p>
+    <p>
+    <input type="radio" name="cid" id="ciss" checked>
+    <label for="ciss">Sim</label>
+    <input type="radio" name="cid" id="cisn">
+    <label for="ciss">Não</label>
+    </p>
+    <input type="button" value="Analisar" onclick="clicar()">
+    <div id='res'></div>
+    </Article>
+    <script>
+        function clicar() {
+            var countries = window.document.querySelector('input#txtp') 
+            var cida = window.document.getElementsByName('cid')
+            var res = window.document.querySelector('div#res')
+            var country = countries.value
+            var img = window.document.createElement('img')
+            img.setAttribute('id','foto')
+            country = country.toUpperCase()
+            if (countries.value.length == 0) {
+                alert('[ERRO] Verifique os dados e tente novamente!')
+            } else if (country =='BRASIL' || cida[0].checked) {
+                res.innerHTML = `<p>Tu nascestes no país chamado <strong>${country}</strong>.</p>`
+                res.innerHTML += 'Tu és <strong>Brasileiro</strong>!'
+                img.setAttribute('src','flagbr.png')
+            } else if (country !='BRASIL' || cida[1].checked) {
+                res.innerHTML = `<p>Tu nascestes no país chamado <strong>${country}</strong>.</p>`
+                res.innerHTML += 'Tu és <strong>Estrangeiro</strong>.'
+            }  
+                res.appendChild(img)
+        }
+    </script>
+</body>
+</html>
