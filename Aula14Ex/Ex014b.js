@@ -19,12 +19,11 @@ function contar() {
             for(let c = i; c <= f; c += ic) {
                 res.innerHTML += ` \u{1F449} ${c} `
          } // contagem crescente
-            res.innerHTML += ` \u{1F3C1}` 
         } else {
             for(let c = i; c >= f; c -= ic) {
                 res.innerHTML += ` \u{1F449} ${c} `
             } // contagem decrescente
-            res.innerHTML += ` \u{1F3C1}`
-        } 
+        }
+        res.innerHTML += ` \u{1F3C1}`
     }
 }
