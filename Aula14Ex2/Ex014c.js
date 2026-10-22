@@ -10,7 +10,7 @@ function tabuada() {
             let item = document.createElement('option')
             item.text = `${n} x ${c} = ${n*c}`
             item.value = `tab${c}`
-            //serve para dar o valor interno para casa tab do seletor.
+            //serve para dar o valor interno para cada tab do seletor.
             tab.appendChild(item)
         }
     }
